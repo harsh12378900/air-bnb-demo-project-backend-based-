@@ -62,6 +62,9 @@ const store= MongoStore.create({
   },
   touchAfter:24*3600,
 });
+store.on("error", (err) => {
+  console.error("Mongo Store Error:", err);
+});
 app.use(
   session({
     store: store,
@@ -125,6 +128,10 @@ app.get("/demouser", async (req, res) => {
 /* ===================== ERROR HANDLER ===================== */
 
 app.use((err, req, res, next) => {
+  if (res.headersSent) {
+    return next(err);
+  }
+
   const { statusCode = 500, message = "Something went wrong" } = err;
   res.status(statusCode).render("listings/alert.ejs", { message });
 });

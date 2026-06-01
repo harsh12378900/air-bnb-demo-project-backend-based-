@@ -6,7 +6,7 @@ const isLoggedIn = function (req, res, next) {
   }
   req.flash("error", "Please login first");
   req.session.redirectUrl = req.originalUrl;
-  res.redirect("/login");
+ return res.redirect("/login");
 };
 
 const saveRedirectUrl = (req, res, next) => {
