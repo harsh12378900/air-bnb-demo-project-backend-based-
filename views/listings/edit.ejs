@@ -1,0 +1,58 @@
+<% layout('layouts/biolerplate') -%>
+<div class="row row2">
+    <div class="col-8 offset-2">
+    <h1> Edit listing</h1>
+    <form method="POST" action="/listing/<%= getlisting._id %>?_method=PUT" class=" needs-validation" novalidate>
+        <div class="mb-3">
+            <label for="title" class="form-lable">Title</label>
+            <input type="text" name="title" value="<%= getlisting.title %>" class="form-control" required>
+            <div class="valid-feedback">
+                Title Looks good!
+              </div>
+        </div>
+           
+            <div>
+                <label for="description" class="form-lable">Description</label>
+                <textarea 
+            name="description" 
+            rows="5" 
+            cols="30" class="form-control" rows="3" cols="30" required><%= getlisting.description %></textarea>
+            <div class="invalid-feedback">
+                Please enter the description
+              </div>
+            </div>
+            
+           <div>
+            <label for="image" class="form-lable">image</label>
+            <input type="text" name="image" value="<%=getlisting.image.url  %>" class="form-control" required>
+           </div>
+            
+            <div class="row">
+                <div class="col-md-4">
+                <label for="price" class="form-lable">Price</label>
+                <input type="text" name="price" value="<%=getlisting.price  %>" type="number" class="form-control" required>
+                <div class="invalid-feedback">
+                    Please enter the price
+                  </div>
+            </div>
+            
+           
+                <div class="col-md-8">
+                    <label for="country" class="form-lable">Country</label>
+                <input type="text" name="country" value="<%=getlisting.country  %>" type="text" class="form-control" required>
+                <div class="invalid-feedback">
+                    Please enter the country
+                  </div>
+                </div>
+            </div>     
+            <div>
+                <label for="location" class="form-lable">Location</label>
+                <input type="text" value="<%=getlisting.location  %>" name="location" class="form-control" required>
+                <div class="invalid-feedback">
+                    Please enter the location
+                  </div>
+            </div>
+            <button class="btn-1">Add</button>
+</div>
+</div>
+    </form>

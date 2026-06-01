@@ -1,0 +1,142 @@
+body {
+    background: aqua;
+    font-family: Arial, sans-serif;
+      display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+.container{
+    flex: 1;
+   
+}
+.navbar {
+    background-color: white;
+}
+
+.navbar-brand {
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: palevioletred;
+}
+
+.container-fluid {
+    height: 5rem;
+    padding-left: 30px;
+}
+
+.nav-link {
+    color: #000;
+}
+
+/* footer */
+.f-info-links a {
+    text-decoration: none;
+    color: #222;
+    padding: 10px;
+}
+
+.f-info-links a:hover {
+    text-decoration: underline;
+}
+ 
+.f-info{
+    text-align: center;
+    height: 7rem;
+    background-color: #ebebeb;
+
+}
+.fa-brands{
+    padding: 10px;
+    font-size: 20px;
+}
+.company{
+    padding-bottom: 10px;
+}
+.f-info-links{
+    padding-bottom: 10px;
+}
+  
+/* cards */
+
+.card-listing {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    border: none !important;
+    margin: 2rem;
+    text-align: center;
+}
+
+.card-listing:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.card-img-top{
+    border-radius: 1rem !important;
+    height: 20rem;
+}
+
+/* new route */
+
+.btn-1{
+    background-color: black ;
+    color: white;
+    padding-left: 20px;
+    padding-right: 29px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+/* show edit */
+
+.card-con{
+    background-color:rgb(255, 255, 255) !important;
+
+    width: 30rem;
+    margin: auto;
+    
+}
+.card-img{
+    height: 30vh;
+    border-radius: 20px !important;
+    
+}
+.span{
+    font-weight: bold;
+}
+
+.btn2{
+    margin-right: 30px;
+    background-color: black;
+    color: white;
+    border: none;
+    padding:  10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+.btn3{
+    text-decoration: none;
+}
+
+/* reviews */
+/* .allReview{
+    width: 100% !important;
+} */
+
+/* comment card style in show */
+.allReview{
+    display: flex !important;
+    width: 600px;
+    flex-wrap: wrap !important;
+    
+}
+
+.card-body{
+    width: 200px;
+}
+.card1{
+    margin-left: 5px;
+}
+
+
